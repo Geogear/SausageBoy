@@ -478,6 +478,26 @@ PrefabInstance:
       propertyPath: horizontalRayCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: charCheckRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: charAttackRate
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: maxComboDelayAnimation
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: maxComboDelay
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2112227709286007644, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}
       propertyPath: m_Sprite
@@ -577,12 +597,12 @@ PrefabInstance:
     - target: {fileID: 2112227710708264911, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.011
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 2112227710708264911, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: -0.068
       objectReference: {fileID: 0}
     - target: {fileID: 2112227710969797270, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}

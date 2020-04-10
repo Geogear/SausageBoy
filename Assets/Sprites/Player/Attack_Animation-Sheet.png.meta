@@ -1,49 +1,22 @@
 fileFormatVersion: 2
-guid: c2d8e0d0be3b70842b2eb4b70ee73e15
+guid: eb3b1ab137ffb61448715ca27ee46de2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2516800361753073082
-    second: Idle_Animation_Sprite_Sheet_88x88_0
+      213: -120008839986889114
+    second: Attack_Animation-Sheet_0
   - first:
-      213: 1735514545789474831
-    second: Idle_Animation_Sprite_Sheet_88x88_1
+      213: 1057508739292718073
+    second: Attack_Animation-Sheet_1
   - first:
-      213: -7398249877817371790
-    second: Idle_Animation_Sprite_Sheet_88x88_2
+      213: 2497764132230560944
+    second: Attack_Animation-Sheet_2
   - first:
-      213: 5878389235053810354
-    second: Idle_Animation_Sprite_Sheet_88x88_3
+      213: 6075897431286610239
+    second: Attack_Animation-Sheet_3
   - first:
-      213: 6226480741131676455
-    second: Idle_Animation_Sprite_Sheet_88x88_4
-  - first:
-      213: -7424436873402006076
-    second: Idle_Animation_Sprite_Sheet_88x88_5
-  - first:
-      213: 1293700703257080559
-    second: Idle_Animation_Sprite_Sheet_88x88_0
-  - first:
-      213: 3838555801960283312
-    second: Idle_Animation_Sprite_Sheet_88x88_1
-  - first:
-      213: -1131298724381013458
-    second: Idle_Animation_Sprite_Sheet_88x88_2
-  - first:
-      213: -3560203254000726637
-    second: Idle_Animation_Sprite_Sheet_88x88_3
-  - first:
-      213: 397293447105692941
-    second: Idle_Animation_Sprite_Sheet_88x88_4
-  - first:
-      213: -8749552441831236712
-    second: Idle_Animation_Sprite_Sheet_88x88_5
-  - first:
-      213: -4588087853680770790
-    second: Idle_Animation_Sprite_Sheet_88x88_6
-  - first:
-      213: -7338807586635968290
-    second: Idle_Animation_Sprite_Sheet_88x88_7
+      213: -269755428385342718
+    second: Attack_Animation-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_0
+      name: Attack_Animation-Sheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 12
-        width: 77
-        height: 88
+        x: 0
+        y: 0
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,113 +116,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2bf4f6fe524f110800000000000000
-      internalID: 1293700703257080559
+      spriteID: 66ebcaa8894a55ef0800000000000000
+      internalID: -120008839986889114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_1
+      name: Attack_Animation-Sheet_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 12
-        width: 76
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 150
+        y: 0
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.345, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bc7b521a2a454530800000000000000
-      internalID: 3838555801960283312
+      spriteID: 9f3e96078960dae00800000000000000
+      internalID: 1057508739292718073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_2
+      name: Attack_Animation-Sheet_2
       rect:
         serializedVersion: 2
-        x: 182
-        y: 12
-        width: 77
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 300
+        y: 0
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.345, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2aca66ddc1dc40f0800000000000000
-      internalID: -1131298724381013458
+      spriteID: 0bc705a9e37d9a220800000000000000
+      internalID: 2497764132230560944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_3
+      name: Attack_Animation-Sheet_3
       rect:
         serializedVersion: 2
-        x: 272
-        y: 12
-        width: 77
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.345, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39dc815d00e979ec0800000000000000
-      internalID: -3560203254000726637
+      spriteID: f39fb83b58ce15450800000000000000
+      internalID: 6075897431286610239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_4
+      name: Attack_Animation-Sheet_4
       rect:
         serializedVersion: 2
-        x: 358
-        y: 12
-        width: 76
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.345, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0543520948738500800000000000000
-      internalID: 397293447105692941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_Animation_Sprite_Sheet_88x88_5
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 12
-        width: 77
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89b5ff84968539680800000000000000
-      internalID: -8749552441831236712
+      spriteID: 20bbbdafdd2a14cf0800000000000000
+      internalID: -269755428385342718
       vertices: []
       indices: 
       edges: []

@@ -1,26 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
-[RequireComponent(typeof(CharacterController2D))]
 public class Player : CharacterRenderer2D
 {
     [Space(10)]
     [Header("Player Variables")]
     [SerializeField] private float jumpHeight = 4f;
-    [SerializeField] private float timeToJumpApex = .4f;
+    private Vector2 jumpVector;
     Animator myAnimator; // animator component
     private float move; // Movement input variable range in [-1,1]
+    CharacterState prevState;
 
     //CharacterController2D
     CharacterController2D charController;
-    Vector3 velocity;
-    float gravity;
-    float jumpVelocity;
-    float velocityXSmoothing;
-    public float accelerationTimeAirborne = .2f;
-    public float accelerationTimeGrounded = .1f;
 
     private int extraJumps; // Amount of jump
     [SerializeField] private int extraJumpsValue = 0;
@@ -28,7 +21,6 @@ public class Player : CharacterRenderer2D
 
     //TIMER
     float nextAttackTime = 0f;
-    public int noOfClicks = 1; // amount of clicks ranged in [0,3] since player has 3 attack animations
     float lastClickedTime = 0;
     public float maxComboDelay = 0.9f; // checking step by step click not spawning
     public float maxComboDelayAnimation = 0.53f; // animation delay
@@ -48,6 +40,7 @@ public class Player : CharacterRenderer2D
     // Start is called before the first frame update
     void Start()
     {
+        charRigidbody = GetComponent<Rigidbody2D>();
         charController = GetComponent<CharacterController2D>();
         collidingAgainst = CollidedAreas.Ground;
         ChangeState(CharacterState.inIdling);
@@ -60,40 +53,23 @@ public class Player : CharacterRenderer2D
 
     private void Update()
     {
-        gravity = -(2 * jumpHeight) / (Mathf.Pow(timeToJumpApex, 2));
-        jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-        if (charController.collisions.above || charController.collisions.below)
-        {
-            velocity.y = 0;
-        }
         Move();
-        SetCharacterState();
         CheckMovementDirection();
         Jump();
         Attack();
         RunAnimations();
+        SetCharacterState();
     }
     private void FixedUpdate()
     {
-        if (IsIdling())
-        {
-            velocity.x = 0;
-        }
+        AdvancedJump();
         IsOnGround();
         CheckSurroundings();
-        AdvancedJump();
     }
     protected override void Move()
     {
-        velocity.y += gravity * Time.deltaTime;
         move = Input.GetAxisRaw("Horizontal");
-        float targetVelocityX = move * charMoveSpeed;
-        if (IsRunning() || IsJumping() || IsFalling())
-        {
-            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (charController.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
-        }
-
-        charController.Move(velocity * Time.deltaTime);
+        charRigidbody.velocity = new Vector2(move * charMoveSpeed,charRigidbody.velocity.y);
     }
     void Jump()
     {
@@ -104,16 +80,14 @@ public class Player : CharacterRenderer2D
         }
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
-            velocity = Vector2.up * jumpVelocity;
-            charController.Move(velocity * Time.deltaTime);
-            myAnimator.SetTrigger("Jump");
+            jumpVector = Vector2.up * jumpHeight * 2f;
+            charRigidbody.velocity = new Vector2(charRigidbody.velocity.x, jumpVector.y);
             extraJumps--;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && charIsGrounded == true)
+        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && charIsGrounded)
         {
-            velocity = Vector2.up * jumpVelocity;
-            charController.Move(velocity * Time.deltaTime);
-            myAnimator.SetTrigger("Jump");
+            jumpVector = Vector2.up * jumpHeight * 2f;
+            charRigidbody.velocity = new Vector2(charRigidbody.velocity.x, jumpVector.y);
         }
     }
     void RunAnimations()
@@ -122,7 +96,7 @@ public class Player : CharacterRenderer2D
         myAnimator.SetBool("isFalling", IsFalling());
         myAnimator.SetBool("isIdling", IsIdling());
         myAnimator.SetBool("isRunning", IsRunning());
-        myAnimator.SetBool("isGrounded", charIsGrounded);
+        myAnimator.SetBool("isJumping", IsJumping());
     }
     protected override void Flip()
     {
@@ -141,49 +115,13 @@ public class Player : CharacterRenderer2D
                 {
                     ChangeState(CharacterState.inIdling);
                 }
-                else
-                {
-                    ChangeState(CharacterState.onFalling);
-                }
-
-                //canMove = true;
             }
-            if (Time.time - lastClickedTime > maxComboDelay * 6)
-            {
-                noOfClicks = 1;
-            }
-            // check if left mouse button is clicked (0) for left (1) for right
 
-            if (IsAttacking())
-            {
-                // get current time
-                // increase amount of clicks           
-                // check if player touchs ground, if so rigidbody velocity is made zero for stopping 
-                if (IsAttacking())
-                {
-                    //Normal Attack
-                    if (IsAttacking())
-                    {
-                        if (noOfClicks == 1)
-                        {
-                            myAnimator.SetTrigger("Attack1");
-                        }
-                        else if (noOfClicks == 2)
-                        {
-                            myAnimator.SetTrigger("Attack2");
-                        }
-                        else if (noOfClicks == 3)
-                        {
-                            myAnimator.SetTrigger("Attack3");
-                        }
-                    }
-                }
                 // next click time should be that attack rate which is specified by ourselves.
                 nextAttackTime = Time.time + 1f / charAttackRate;
 
             }
-        }
-    }
+     }
 
     public override void TakeDamage(int damage)
     {
@@ -238,26 +176,37 @@ public class Player : CharacterRenderer2D
     {
         charIsGrounded = Physics2D.OverlapCircle(charGroundCheckPoint.position, charCheckRadius, groundLayer);
         // creating a raycast form wallcheck position to right in wallcheckdistance size and last parameter represents what kind of layer is touched
-
+        myAnimator.SetBool("isGrounded", charIsGrounded);
     }
 
 
     void AdvancedJump()
     {
         //if going down then speed up the falling
-        if (velocity.y < 0  && !charIsGrounded)
+        if (charRigidbody.velocity.y < 0  && !charIsGrounded)
         {
-            velocity += (Vector3)(Vector2.up * gravity * (fallMultiplier - 1) * Time.deltaTime);
+            charRigidbody.velocity += (Vector2.up * Physics2D.gravity * (fallMultiplier - 1) * Time.deltaTime);
         }
     }
 
     protected override void ChangeState(CharacterState charState)
     {
-        this.charState = charState;
+        if(this.charState != charState)
+        {
+            prevState = this.charState;
+            this.charState = charState;
+        }
+        
     }
 
     protected override void SetCharacterState()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            lastClickedTime = Time.time;
+            ChangeState(CharacterState.inAttacking);
+        }
+
         //Setting whether character is running or is idling
         if (!IsAttacking())
         {
@@ -265,33 +214,41 @@ public class Player : CharacterRenderer2D
             {
                 ChangeState(CharacterState.onRunning);
             }
-            else if (charIsGrounded && !IsJumping() & !IsIdling())
+            else if (charIsGrounded & !IsIdling())
             {
                 ChangeState(CharacterState.inIdling);
-                velocity.x = 0;
             }
         }
         //
-        if (!charIsGrounded && velocity.y > 0)
+        if (!charIsGrounded && charRigidbody.velocity.y > 0 && !IsAttacking())
         {
             ChangeState(CharacterState.onJumping);
         }
         //
-        if (velocity.y < 0 && !charIsGrounded)
+        if (charRigidbody.velocity.y < 0 && !charIsGrounded && !IsAttacking())
         {
             ChangeState(CharacterState.onFalling);
         }
-        if (Input.GetMouseButtonDown(0))
-        {
-            //noOfClicks++;
-            lastClickedTime = Time.time;
-            noOfClicks = Mathf.Clamp(noOfClicks, 1, 3);
-            if (charIsGrounded)
-            {
-                ChangeState(CharacterState.inAttacking);
-            }
-        }
+
     }
 
+    public void EndAttack()
+    {
+        if(prevState == CharacterState.inAttacking)
+        {
+            ChangeState(CharacterState.inIdling);
+        }
+        else
+        {
+            ChangeState(prevState);
+        }
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(charGroundCheckPoint.position, charCheckRadius);
+        Gizmos.DrawWireSphere(charAttackPoint.position,charAttackRange);
+    }
 }
 

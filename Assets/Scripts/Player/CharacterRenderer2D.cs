@@ -34,6 +34,7 @@ public class CharacterRenderer2D : MonoBehaviour
     #region Protected Variables
     ///Character Components
     protected SpriteRenderer charSprite;
+    protected Rigidbody2D charRigidbody;
 
     ///Members of other classes
     protected CharacterState charState;
