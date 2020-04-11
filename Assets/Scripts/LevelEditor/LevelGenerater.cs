@@ -6,7 +6,7 @@ public class LevelGenerater : MonoBehaviour
 {
     [SerializeField] List<GameObject> levels = null;
     [SerializeField] Player player = null;
-    [SerializeField] Camera mainCamera;
+    [SerializeField] Camera mainCamera = null;
     private int currentLevelIndex;
     private int prevLevelIndex;
 

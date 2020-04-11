@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49033db693de0545b61c60f798dfdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleAttackRange: 0
-  obstacleAttackDamage: 0
+  obstacleAttackRange: 0.3
+  obstacleAttackDamage: 1
   obstacleAttackPoint: {fileID: 5124201661231703955}
   playerLayer:
     serializedVersion: 2

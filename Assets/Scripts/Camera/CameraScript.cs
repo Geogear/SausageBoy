@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    [Tooltip("Object to Follow")][SerializeField] Player player;
+    [Tooltip("Object to Follow")][SerializeField] Player player = null;
 
     // Start is called before the first frame update
     void Start()
