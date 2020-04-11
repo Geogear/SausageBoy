@@ -12,8 +12,6 @@ public class Player : CharacterRenderer2D
     private float move; // Movement input variable range in [-1,1]
     CharacterState prevState;
 
-    //CharacterController2D
-    CharacterController2D charController;
 
     private int extraJumps; // Amount of jump
     [SerializeField] private int extraJumpsValue = 0;
@@ -41,7 +39,6 @@ public class Player : CharacterRenderer2D
     void Start()
     {
         charRigidbody = GetComponent<Rigidbody2D>();
-        charController = GetComponent<CharacterController2D>();
         collidingAgainst = CollidedAreas.Ground;
         ChangeState(CharacterState.inIdling);
         charCurrentHealth = charMaxHealth;
@@ -143,7 +140,7 @@ public class Player : CharacterRenderer2D
         hitEnemies = Physics2D.OverlapCircleAll(charAttackPoint.position, charAttackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            //enemy.GetComponent<Enemy>().TakeDamage(charAttackDamage);
+            enemy.GetComponent<Fork>().TakeDamage(charAttackDamage);
         }
     }
 
