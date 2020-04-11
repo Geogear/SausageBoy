@@ -94,17 +94,16 @@ public class EnemyRenderer2D : MonoBehaviour
     protected virtual void Move()
     {
         CheckMovementDirection();
-        Vector2 newPos = Vector2.MoveTowards(enemyRigidbody.position, targetPos, enemyMoveSpeed * Time.deltaTime * 2);
-        enemyRigidbody.MovePosition(newPos);
+        transform.position = new Vector3(enemyMoveSpeed * Time.deltaTime * playerDirection + transform.position.x, transform.position.y,transform.position.z);
     }
 
     protected virtual void SetEnemyState()
     {
-        if(Vector2.Distance(transform.position,player.transform.position) <= playerNoticeRange)
+        if(Vector2.Distance(transform.position,player.transform.position) <= playerNoticeRange && !IsDead())
         {
             ChangeState(EnemyState.Chasing);
         }
-        else
+        else if(!IsDead())
         {
             ChangeState(EnemyState.Idling);
         }
@@ -144,12 +143,15 @@ public class EnemyRenderer2D : MonoBehaviour
     ///</summary>
     public virtual void GiveDamage()
     {
-        Collider2D[] hitPlayer;
-        // create a circle in enemyAttackPoint position which has a radius size is equal to enemyAttackRange and last parameter represents what kind of layer is touched
-        hitPlayer = Physics2D.OverlapCircleAll(enemyAttackPoint.position, enemyAttackRange, playerLayer);
-        foreach (Collider2D player in hitPlayer)
+        if (!IsDead())
         {
-            player.GetComponent<Player>().TakeDamage(enemyAttackDamage);
+            Collider2D[] hitPlayer;
+            // create a circle in enemyAttackPoint position which has a radius size is equal to enemyAttackRange and last parameter represents what kind of layer is touched
+            hitPlayer = Physics2D.OverlapCircleAll(enemyAttackPoint.position, enemyAttackRange, playerLayer);
+            foreach (Collider2D player in hitPlayer)
+            {
+                player.GetComponent<Player>().TakeDamage(enemyAttackDamage);
+            }
         }
     }
 
@@ -161,7 +163,6 @@ public class EnemyRenderer2D : MonoBehaviour
     {
         //enemyAnimationController.SetTrigger("Hit");
         enemyCurrentHealth -= damage;
-        Debug.Log(enemyCurrentHealth);
         if (enemyCurrentHealth <= 0)
         {
             ChangeState(EnemyState.Dead);
