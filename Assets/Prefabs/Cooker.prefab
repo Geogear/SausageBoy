@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6212426261440564136}
   - component: {fileID: 6212426261440564141}
   - component: {fileID: 6212426261440564140}
-  m_Layer: 0
+  - component: {fileID: 98775355}
+  m_Layer: 11
   m_Name: Cooker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,6 +150,21 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &98775355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212426261440564137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8162095d2f76ca4c81d61163fad24b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerName: []
+  animationTime: []
+  cooldownTime: []
 --- !u!1 &6212426261900385610
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6212426261900385609}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
