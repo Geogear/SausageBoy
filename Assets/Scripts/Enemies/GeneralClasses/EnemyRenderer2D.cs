@@ -94,8 +94,7 @@ public class EnemyRenderer2D : MonoBehaviour
     {
         CheckMovementDirection();
         transform.position = new Vector3(playerDirection * enemyMoveSpeed * Time.deltaTime + transform.position.x,transform.position.y,transform.position.z);
-        /*Vector2 newPos = Vector2.MoveTowards(enemyRigidbody.position, targetPos, enemyMoveSpeed * Time.deltaTime * 2);
-        enemyRigidbody.MovePosition(newPos);*/
+
     }
 
     protected virtual void SetEnemyState()
