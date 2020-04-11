@@ -60,9 +60,11 @@ public class Timer : MonoBehaviour
     public void DecreaseCurrentFrame()
     { 
         for(int i = 0; i < timerName.Count; i++)
-        {
-            currentFrame[i] -= 1;
-            cooldownFrame[i] -= 1;
+        { 
+            if(currentFrame[i] > 0)
+                currentFrame[i] -= 1; 
+            if(cooldownFrame[i] > 0)
+                cooldownFrame[i] -= 1;
         }
     } 
 
@@ -97,7 +99,7 @@ public class Timer : MonoBehaviour
         {
             if (System.String.Equals(timerName[i], Name))
             {
-                return !(cooldownFrame[i] < 0); 
+                return (cooldownFrame[i] > 0) ? true : false;
             }
         } 
         //for the ide to accept the method
@@ -121,13 +123,13 @@ public class Timer : MonoBehaviour
     } 
     //Add the given values to the lists and add 0 for cooldown because we want to start with no cooldown 
     //And add totalframe to currentframe because that's its initial value
-    public void addTimer(string timerName, float animationTime, float cooldownTime, int totalFrame )
+    public void addTimer(string timerName, float animationTime, float cooldownTime)
     {
         this.timerName.Add(timerName);
         this.animationTime.Add(animationTime);
         this.cooldownTime.Add(cooldownTime);
         this.cooldownFrame.Add(0);
-        this.totalFrame.Add(totalFrame);
-        this.currentFrame.Add(totalFrame);
+        this.totalFrame.Add(ReturnFrameCount(animationTime));
+        this.currentFrame.Add(ReturnFrameCount(animationTime));
     }
 }

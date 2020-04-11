@@ -177,6 +177,7 @@ MonoBehaviour:
   fallMultiplier: 2.5
   maxComboDelay: 0.2
   maxComboDelayAnimation: 0.6
+  matWhite: {fileID: 2100000, guid: de3fff9b042adc64ca04dd399e75cf81, type: 2}
 --- !u!95 &2112227709286007646
 Animator:
   serializedVersion: 3

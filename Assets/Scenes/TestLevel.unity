@@ -224,7 +224,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2112227709904631721}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1667909781}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a6edc6c3a93f4d4fa750a8ef8cbb6ef, type: 3}
@@ -570,6 +570,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1667909781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2112227709286007640, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2112227709904631721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1667909787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667909781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8162095d2f76ca4c81d61163fad24b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerName: []
+  animationTime: []
+  cooldownTime: []
 --- !u!1 &2084103136
 GameObject:
   m_ObjectHideFlags: 0

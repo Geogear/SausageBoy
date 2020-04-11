@@ -10,7 +10,7 @@ public class Player : CharacterRenderer2D
     private Vector2 jumpVector;
     Animator myAnimator; // animator component
     private float move; // Movement input variable range in [-1,1]
-    CharacterState prevState;
+    CharacterState prevState; 
 
 
     private int extraJumps; // Amount of jump
@@ -21,7 +21,11 @@ public class Player : CharacterRenderer2D
     float nextAttackTime = 0f;
     float lastClickedTime = 0;
     public float maxComboDelay = 0.9f; // checking step by step click not spawning
-    public float maxComboDelayAnimation = 0.53f; // animation delay
+    public float maxComboDelayAnimation = 0.53f; // animation delay  
+
+    //Materials For Flashing When Taken Damage 
+    [SerializeField] private Material matWhite;
+    private Material matDefault;
 
     public CharacterState PlayerState
     {
@@ -46,6 +50,9 @@ public class Player : CharacterRenderer2D
         extraJumps = extraJumpsValue;
         myAnimator = GetComponent<Animator>();
         charSprite = GetComponent<SpriteRenderer>();
+        charTimer = GetComponent<Timer>();
+        charTimer.addTimer("NoHit" , 10, 3);
+        matDefault = charSprite.material;
     }
 
     private void Update()
@@ -56,12 +63,14 @@ public class Player : CharacterRenderer2D
         Attack();
         RunAnimations();
         SetCharacterState();
+        PlayEffects();
     }
     private void FixedUpdate()
     {
         AdvancedJump();
         IsOnGround();
         CheckSurroundings();
+        charTimer.DecreaseCurrentFrame();
     }
     protected override void Move()
     {
@@ -122,13 +131,19 @@ public class Player : CharacterRenderer2D
 
     public override void TakeDamage(int damage)
     {
-        charCurrentHealth -= damage;
-        if (charCurrentHealth <= 0)
+        if (charTimer.isOnCooldown("NoHit") == false)
         {
-            myAnimator.SetTrigger("Die");
-            GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
+            charCurrentHealth -= damage;
+            if (charCurrentHealth <= 0)
+            {
+                myAnimator.SetTrigger("Die");
+                GetComponent<Collider2D>().enabled = false;
+                this.enabled = false;
+            }
+            charTimer.ResetCooldownFrame("NoHit");
+            charSprite.material = matWhite;
         }
+
     }
 
     // Attack animation event to check whether enemy take damage or not.
@@ -245,6 +260,25 @@ public class Player : CharacterRenderer2D
     {
         Gizmos.DrawWireSphere(charGroundCheckPoint.position, charCheckRadius);
         Gizmos.DrawWireSphere(charAttackPoint.position,charAttackRange);
+    } 
+
+    //Plays effects if there is any
+    public void PlayEffects()
+    {
+        if (charTimer.isOnCooldown("NoHit"))
+        {
+            if(charSprite.material == matWhite)
+            {
+                charSprite.material = matDefault;
+            }
+            else if(charSprite.material == matDefault)
+            {
+                charSprite.material = matWhite;
+            }
+        }else if(charTimer.isOnCooldown("NoHit") == false && charSprite.material != matDefault)
+        {
+            charSprite.material = matDefault;
+        }
     }
 }
 
