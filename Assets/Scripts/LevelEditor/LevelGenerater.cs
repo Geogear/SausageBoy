@@ -20,8 +20,8 @@ public class LevelGenerater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LevelCanBeGenerated();
         GenerateLevel();
+        DeletePreviousLevel();
     }
 
     private void GenerateLevel()
@@ -32,8 +32,8 @@ public class LevelGenerater : MonoBehaviour
             do
             {
                 currentLevelIndex = Random.Range(0, levels.Count);
-            } while (prevLevelIndex == currentLevelIndex);
-            SpawnLevel(levels[currentLevelIndex], levels[prevLevelIndex].GetComponent<LevelEditor>().levelEndPosition);
+            } while (prevLevelIndex == currentLevelIndex); 
+            SpawnLevel(levels[currentLevelIndex], levels[prevLevelIndex].GetComponent<LevelEditor>().levelEndPosition); 
         }
     }
 
@@ -56,5 +56,14 @@ public class LevelGenerater : MonoBehaviour
     {
         Vector3 cameraSize = new Vector3(mainCamera.orthographicSize * 1.3f, 0);
         return cameraSize;
-    } 
+    }  
+
+    private void DeletePreviousLevel()
+    {
+        Vector3 leftSide = new Vector3(mainCamera.transform.position.x - mainCamera.orthographicSize, 0);
+        if ( leftSide.x - levels[prevLevelIndex].GetComponent<LevelEditor>().levelEndPosition.position.x >= 0)
+        {
+            Destroy(levels[prevLevelIndex]);
+        }
+    }
 }
