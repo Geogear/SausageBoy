@@ -11,6 +11,8 @@ public class ElectricSocket : ObstacleRenderer2D
         obstacleRigidbody = GetComponent<Rigidbody2D>();
         obstacleAnimationController = GetComponent<Animator>();
         obstacleState = ObstacleState.Run;
+        obstacleTimer = GetComponent<Timer>();
+        obstacleTimer.addTimer("Electric", 5, 1);
 }
 
     // Update is called once per frame
@@ -21,6 +23,8 @@ public class ElectricSocket : ObstacleRenderer2D
     }
     private void FixedUpdate()
     {
+        obstacleTimer.DecreaseCurrentFrame();
         SetObstacleState();
-    }
+    } 
+
 }

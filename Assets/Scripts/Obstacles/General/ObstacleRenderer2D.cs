@@ -69,11 +69,17 @@ public class ObstacleRenderer2D : MonoBehaviour
             {
                 player.GetComponent<Player>().TakeDamage(obstacleAttackDamage);
             }
+            obstacleTimer.ResetCooldownFrame("Electric");
         }
     }
 
     protected virtual void SetObstacleState()
     {
+
+        if (obstacleTimer.isOnCooldown("Electric") == false )
+        {
+            obstacleState = ObstacleState.Run;    
+        }
     }
 
     protected virtual bool IsRunning()
