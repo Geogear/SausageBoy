@@ -124,11 +124,11 @@ public class EnemyRenderer2D : MonoBehaviour
     protected virtual void CheckMovementDirection()
     {
         GetTarget();
-        if (playerDirection < 0 && enemyIsFacingRight)
+        if (playerDirection < 0 && enemyIsFacingRight && !player.IsDead())
         {
             Flip();
         }
-        else if (playerDirection > 0 && !enemyIsFacingRight)
+        else if (playerDirection > 0 && !enemyIsFacingRight && !player.IsDead())
         {
             Flip();
         }

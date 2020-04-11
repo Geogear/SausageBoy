@@ -10,8 +10,8 @@ public class Player : CharacterRenderer2D
     private Vector2 jumpVector;
     Animator myAnimator; // animator component
     private float move; // Movement input variable range in [-1,1]
-    CharacterState prevState; 
-
+    CharacterState prevState;
+    [SerializeField] float notGetDamageCooldown = 0;
 
     private int extraJumps; // Amount of jump
     [SerializeField] private int extraJumpsValue = 0;
@@ -23,8 +23,6 @@ public class Player : CharacterRenderer2D
     public float maxComboDelay = 0.9f; // checking step by step click not spawning
     public float maxComboDelayAnimation = 0.53f; // animation delay  
 
-    //Materials For Flashing When Taken Damage 
-    [SerializeField] private Material matWhite = null;
     private Material matDefault;
 
     public CharacterState PlayerState
@@ -51,7 +49,7 @@ public class Player : CharacterRenderer2D
         myAnimator = GetComponent<Animator>();
         charSprite = GetComponent<SpriteRenderer>();
         charTimer = GetComponent<Timer>();
-        charTimer.addTimer("NoHit" , 10, 3);
+        charTimer.addTimer("NoHit" , 10, notGetDamageCooldown);
         matDefault = charSprite.material;
     }
 
@@ -146,7 +144,6 @@ public class Player : CharacterRenderer2D
                 FindObjectOfType<GameManager>().EndGame();
             }
             charTimer.ResetCooldownFrame("NoHit");
-            charSprite.material = matWhite;
         }
 
     }
@@ -272,17 +269,11 @@ public class Player : CharacterRenderer2D
     {
         if (charTimer.isOnCooldown("NoHit"))
         {
-            if(charSprite.material == matWhite)
-            {
-                charSprite.material = matDefault;
-            }
-            else if(charSprite.material == matDefault)
-            {
-                charSprite.material = matWhite;
-            }
-        }else if(charTimer.isOnCooldown("NoHit") == false && charSprite.material != matDefault)
+            charSprite.color = new Color(charSprite.color.r, charSprite.color.b, charSprite.color.g, Mathf.PingPong(Time.time, Time.deltaTime * 180));
+            Physics2D.IgnoreLayerCollision(9, 10);
+        }else if(charTimer.isOnCooldown("NoHit") == false)
         {
-            charSprite.material = matDefault;
+            charSprite.color = new Color(charSprite.color.r, charSprite.color.b, charSprite.color.g, 255f);
         }
     }
 }
