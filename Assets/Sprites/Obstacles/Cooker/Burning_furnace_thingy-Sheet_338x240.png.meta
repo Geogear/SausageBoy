@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 5c64e973b1d74304a97ae12db8b745f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3220655243384320574
+    second: Burning_furnace_thingy-Sheet_338x240_0
+  - first:
+      213: 4912669635007300735
+    second: Burning_furnace_thingy-Sheet_338x240_1
+  - first:
+      213: -7258574308319757126
+    second: Burning_furnace_thingy-Sheet_338x240_2
+  - first:
+      213: -6609359512187643524
+    second: Burning_furnace_thingy-Sheet_338x240_3
+  - first:
+      213: 1168421627215047363
+    second: Burning_furnace_thingy-Sheet_338x240_4
+  - first:
+      213: -4964195213320228849
+    second: Burning_furnace_thingy-Sheet_338x240_5
+  - first:
+      213: -4375573285564324756
+    second: Burning_furnace_thingy-Sheet_338x240_6
+  - first:
+      213: 1773883831145794356
+    second: Burning_furnace_thingy-Sheet_338x240_7
+  - first:
+      213: -56075335775357897
+    second: Burning_furnace_thingy-Sheet_338x240_8
+  - first:
+      213: 818060057622806515
+    second: Burning_furnace_thingy-Sheet_338x240_9
+  - first:
+      213: 2387912371854208773
+    second: Burning_furnace_thingy-Sheet_338x240_10
+  - first:
+      213: 9184748673098676228
+    second: Burning_furnace_thingy-Sheet_338x240_11
+  - first:
+      213: -5928555702511765769
+    second: Burning_furnace_thingy-Sheet_338x240_12
+  - first:
+      213: 6550750283146630273
+    second: Burning_furnace_thingy-Sheet_338x240_13
+  - first:
+      213: 8552399186462479021
+    second: Burning_furnace_thingy-Sheet_338x240_14
+  - first:
+      213: -3576693357090155080
+    second: Burning_furnace_thingy-Sheet_338x240_15
+  - first:
+      213: 7290574196047238469
+    second: Burning_furnace_thingy-Sheet_338x240_16
+  - first:
+      213: 8279126754182865298
+    second: Burning_furnace_thingy-Sheet_338x240_17
+  - first:
+      213: 5023696900625328583
+    second: Burning_furnace_thingy-Sheet_338x240_18
+  - first:
+      213: 8687187572868767211
+    second: Burning_furnace_thingy-Sheet_338x240_19
+  - first:
+      213: 43463607226558451
+    second: Burning_furnace_thingy-Sheet_338x240_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32fbed41e012bc20800000000000000
+      internalID: 3220655243384320574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_1
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74457d210f4d2440800000000000000
+      internalID: 4912669635007300735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_2
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcf2d8cf1d544b90800000000000000
+      internalID: -7258574308319757126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_3
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79d433aa86d644a0800000000000000
+      internalID: -6609359512187643524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_4
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca69068741173010800000000000000
+      internalID: 1168421627215047363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_5
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f007a5241c2ab1bb0800000000000000
+      internalID: -4964195213320228849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_6
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64ef319747d643c0800000000000000
+      internalID: -4375573285564324756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_7
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b014c22f91e9810800000000000000
+      internalID: 1773883831145794356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_8
+      rect:
+        serializedVersion: 2
+        x: 2704
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734f27a77c7c83ff0800000000000000
+      internalID: -56075335775357897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burning_furnace_thingy-Sheet_338x240_9
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 0
+        width: 338
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fffa83c9455a5b00800000000000000
+      internalID: 818060057622806515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
