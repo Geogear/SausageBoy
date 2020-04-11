@@ -159,8 +159,9 @@ public class EnemyRenderer2D : MonoBehaviour
     ///</summary>
     public virtual void TakeDamage(int damage)
     {
-        enemyAnimationController.SetTrigger("Hit");
+        //enemyAnimationController.SetTrigger("Hit");
         enemyCurrentHealth -= damage;
+        Debug.Log(enemyCurrentHealth);
         if (enemyCurrentHealth <= 0)
         {
             ChangeState(EnemyState.Dead);

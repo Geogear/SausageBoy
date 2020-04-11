@@ -159,13 +159,13 @@ MonoBehaviour:
   charMaxHealth: 100
   charCheckRadius: 0.2
   charGroundCheckPoint: {fileID: 3438759496156478691}
-  charAttackRange: 0.29
+  charAttackRange: 0.68
   charAttackRate: 2.5
-  charAttackDamage: 3
+  charAttackDamage: 10
   charAttackPoint: {fileID: 5763488657494041629}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   playerLayer:
     serializedVersion: 2
     m_Bits: 512

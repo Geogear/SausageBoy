@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 20ed8a3ab73679646b613ea03a8a1d93
+guid: 84ca7669245305d439e3bf0359f020b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8356112040631933995
-    second: Death-Animation-Sheet_128x128_0
+      213: 2923813969349761161
+    second: Fork_Death_Animation-Sheet_128x128 (1)_0
   - first:
-      213: 2089080453700530824
-    second: Death-Animation-Sheet_128x128_1
+      213: 2212839823423373279
+    second: Fork_Death_Animation-Sheet_128x128 (1)_1
   - first:
-      213: 4201591687278860403
-    second: Death-Animation-Sheet_128x128_2
+      213: 6375118212571103908
+    second: Fork_Death_Animation-Sheet_128x128 (1)_2
   - first:
-      213: -4546491761792652736
-    second: Death-Animation-Sheet_128x128_3
+      213: -3891760551128325325
+    second: Fork_Death_Animation-Sheet_128x128 (1)_3
   - first:
-      213: 1206673046388738465
-    second: Death-Animation-Sheet_128x128_4
+      213: 8303633574992983349
+    second: Fork_Death_Animation-Sheet_128x128 (1)_4
   - first:
-      213: 2955275719242477211
-    second: Death-Animation-Sheet_128x128_5
+      213: -1326986672161365465
+    second: Fork_Death_Animation-Sheet_128x128 (1)_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_0
+      name: Fork_Death_Animation-Sheet_128x128 (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d3e4c22f50290c80800000000000000
-      internalID: -8356112040631933995
+      spriteID: 988da686059739820800000000000000
+      internalID: 2923813969349761161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_1
+      name: Fork_Death_Animation-Sheet_128x128 (1)_1
       rect:
         serializedVersion: 2
         x: 128
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 882380eaa97edfc10800000000000000
-      internalID: 2089080453700530824
+      spriteID: fdffcf3681695be10800000000000000
+      internalID: 2212839823423373279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_2
+      name: Fork_Death_Animation-Sheet_128x128 (1)_2
       rect:
         serializedVersion: 2
         x: 256
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3789d7be06d0f4a30800000000000000
-      internalID: 4201591687278860403
+      spriteID: 4a28c6dcc38f87850800000000000000
+      internalID: 6375118212571103908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_3
+      name: Fork_Death_Animation-Sheet_128x128 (1)_3
       rect:
         serializedVersion: 2
         x: 384
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04aeb1cb4dd97e0c0800000000000000
-      internalID: -4546491761792652736
+      spriteID: 3332e1fe560bdf9c0800000000000000
+      internalID: -3891760551128325325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_4
+      name: Fork_Death_Animation-Sheet_128x128 (1)_4
       rect:
         serializedVersion: 2
         x: 512
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a90a021eb6feb010800000000000000
-      internalID: 1206673046388738465
+      spriteID: 535b67eedbe6c3370800000000000000
+      internalID: 8303633574992983349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death-Animation-Sheet_128x128_5
+      name: Fork_Death_Animation-Sheet_128x128 (1)_5
       rect:
         serializedVersion: 2
         x: 640
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9ee8c2eb9f330920800000000000000
-      internalID: 2955275719242477211
+      spriteID: 722e42007a8959de0800000000000000
+      internalID: -1326986672161365465
       vertices: []
       indices: 
       edges: []

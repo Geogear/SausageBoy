@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 928446626}
   - component: {fileID: 928446630}
   - component: {fileID: 928446631}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f28e735c1adb54f8062c41321a3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMoveSpeed: 5.89
+  enemyMoveSpeed: 5
   enemyMaxHealth: 5
   enemyCheckRadius: 0
   enemyGroundCheckPoint: {fileID: 0}
@@ -419,7 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436034650}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436034649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -0.13, z: 0}
+  m_LocalPosition: {x: 0.25, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 928446629}
@@ -665,8 +665,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}
-      propertyPath: enemyLayers.m_Bits
-      value: 1024
+      propertyPath: charAttackRange
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2112227709286007647, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
         type: 3}

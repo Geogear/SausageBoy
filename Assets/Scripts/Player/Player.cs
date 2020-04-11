@@ -122,7 +122,6 @@ public class Player : CharacterRenderer2D
 
     public override void TakeDamage(int damage)
     {
-        myAnimator.SetTrigger("Hit");
         charCurrentHealth -= damage;
         if (charCurrentHealth <= 0)
         {
