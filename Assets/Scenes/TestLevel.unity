@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f28e735c1adb54f8062c41321a3248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMoveSpeed: 5
+  enemyMoveSpeed: 3
   enemyMaxHealth: 5
   enemyCheckRadius: 0
   enemyGroundCheckPoint: {fileID: 0}
