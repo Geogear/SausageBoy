@@ -45,14 +45,14 @@ public class CharacterRenderer2D : MonoBehaviour
     [Header("General")]
     [Range(0,7)]
     [SerializeField][Tooltip("Character Movement Speed")] protected float charMoveSpeed = 0;
-    [SerializeField][Tooltip("Character Maximum Health")] protected float charMaxHealth = 0;
+    [SerializeField][Tooltip("Character Maximum Health")] protected int charMaxHealth = 0;
 
     [Space(5)]
     ///STATE CONTROLS
     [Header("State Control Variables")]
     [SerializeField] [Tooltip("Character Ground Check Radius")] protected float charCheckRadius = 0;
     [SerializeField] [Tooltip("Character Ground Check Point")] protected Transform charGroundCheckPoint = null;
-    protected float charCurrentHealth;
+    public int charCurrentHealth;
 
     [Space(5)]
     ///ATTACK

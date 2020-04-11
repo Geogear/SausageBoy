@@ -24,7 +24,7 @@ public class Player : CharacterRenderer2D
     public float maxComboDelayAnimation = 0.53f; // animation delay  
 
     //Materials For Flashing When Taken Damage 
-    [SerializeField] private Material matWhite;
+    [SerializeField] private Material matWhite = null;
     private Material matDefault;
 
     public CharacterState PlayerState
