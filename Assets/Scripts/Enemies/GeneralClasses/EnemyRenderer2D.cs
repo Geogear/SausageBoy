@@ -99,7 +99,7 @@ public class EnemyRenderer2D : MonoBehaviour
 
     protected virtual void SetEnemyState()
     {
-        if(Vector2.Distance(transform.position,player.transform.position) <= playerNoticeRange && !IsDead())
+        if(Vector2.Distance(transform.position,player.transform.position) <= playerNoticeRange && !IsDead() && !player.IsDead())
         {
             ChangeState(EnemyState.Chasing);
         }

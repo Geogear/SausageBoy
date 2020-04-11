@@ -74,8 +74,11 @@ public class Player : CharacterRenderer2D
     }
     protected override void Move()
     {
-        move = Input.GetAxisRaw("Horizontal");
-        charRigidbody.velocity = new Vector2(move * charMoveSpeed,charRigidbody.velocity.y);
+        if (!IsDead())
+        {
+            move = Input.GetAxisRaw("Horizontal");
+            charRigidbody.velocity = new Vector2(move * charMoveSpeed, charRigidbody.velocity.y);
+        }
     }
     void Jump()
     {
@@ -136,9 +139,11 @@ public class Player : CharacterRenderer2D
             charCurrentHealth -= damage;
             if (charCurrentHealth <= 0)
             {
+                charRigidbody.velocity = Vector2.zero;
                 myAnimator.SetTrigger("Die");
                 GetComponent<Collider2D>().enabled = false;
                 this.enabled = false;
+                FindObjectOfType<GameManager>().EndGame();
             }
             charTimer.ResetCooldownFrame("NoHit");
             charSprite.material = matWhite;

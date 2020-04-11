@@ -199,7 +199,7 @@ public class CharacterRenderer2D : MonoBehaviour
         return charState == CharacterState.onHitted;
     }
 
-    protected bool IsDead()
+    public bool IsDead()
     {
         return charState == CharacterState.Dead;
     }
