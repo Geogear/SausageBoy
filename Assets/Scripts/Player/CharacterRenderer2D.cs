@@ -174,7 +174,7 @@ public class CharacterRenderer2D : MonoBehaviour
         return charState == CharacterState.inAttacking;
     }
 
-    protected bool IsRunning()
+    public bool IsRunning()
     {
         return charState == CharacterState.onRunning;
     }

@@ -170,7 +170,7 @@ MonoBehaviour:
   enemyCheckRadius: 0
   enemyGroundCheckPoint: {fileID: 0}
   enemyAttackRange: 0.29
-  enemyAttackDamage: 5
+  enemyAttackDamage: 1
   enemyAttackPoint: {fileID: 21968329813592988}
   playerNoticeRange: 5.03
   playerLayer:
