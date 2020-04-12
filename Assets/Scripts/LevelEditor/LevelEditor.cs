@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class LevelEditor : MonoBehaviour
 {
-    [SerializeField] public Transform levelEndPosition;
 
 }
