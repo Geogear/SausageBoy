@@ -289,6 +289,11 @@ public class Player : CharacterRenderer2D
         {
             dustParticles.SetActive(false);
         }
+    } 
+
+    public float GetMoveSpeed()
+    {
+        return charMoveSpeed;
     }
 }
 

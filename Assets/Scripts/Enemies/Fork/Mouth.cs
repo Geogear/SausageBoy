@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mouth : EnemyRenderer2D
 {
     private BoxCollider2D boxCollider;
+    [SerializeField] float accelerationModifier = 0.25f;
     void Start()
     {
         enemyState = EnemyState.Chasing;
@@ -18,6 +19,7 @@ public class Mouth : EnemyRenderer2D
     {
         Move();
         Catched();
+        SpeedUp();
         
     } 
 
@@ -40,5 +42,18 @@ public class Mouth : EnemyRenderer2D
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(enemyAttackPoint.position, enemyAttackRange);
+    } 
+
+    protected void SpeedUp()
+    { 
+        if(enemyMoveSpeed < player.GetComponent<Player>().GetMoveSpeed())
+        {
+            enemyMoveSpeed += enemyMoveSpeed * Time.deltaTime * accelerationModifier; 
+            if(enemyMoveSpeed > player.GetComponent<Player>().GetMoveSpeed())
+            {
+                enemyMoveSpeed = player.GetComponent<Player>().GetMoveSpeed();
+            }
+        }
+
     }
 }
