@@ -19,4 +19,9 @@ public class Cooker : ObstacleRenderer2D
     {
         GiveDamage();
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(obstacleAttackPoint.position, obstacleAttackRange);
+    }
 }

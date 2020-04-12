@@ -25,6 +25,10 @@ public class ElectricSocket : ObstacleRenderer2D
     {
         obstacleTimer.DecreaseCurrentFrame();
         SetObstacleState();
-    } 
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(obstacleAttackPoint.position, obstacleAttackRange);
+    }
 }
