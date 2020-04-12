@@ -979,16 +979,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelGenerator
       objectReference: {fileID: 0}
-    - target: {fileID: 3339310038929037839, guid: a58b483db5599394d9792ad145e7c681,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 3339310038929037839, guid: a58b483db5599394d9792ad145e7c681,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58b483db5599394d9792ad145e7c681, type: 3}
 --- !u!1001 &1885689957903724999
