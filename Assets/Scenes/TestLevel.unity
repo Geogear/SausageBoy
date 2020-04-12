@@ -392,6 +392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouth
       objectReference: {fileID: 0}
+    - target: {fileID: 3457358534018324612, guid: de1ff0bcf3698ed4a9c513c71c345805,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 622916850}
     - target: {fileID: 7213131191325435355, guid: de1ff0bcf3698ed4a9c513c71c345805,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -668,30 +673,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1700339618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2112227709286007640, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2112227709904631721}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1700339625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700339618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86ab7890fb88064e93fedff96ff7350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  numOfHearts: 3
-  hearts:
-  - {fileID: 1702698213}
-  - {fileID: 2041971192}
-  - {fileID: 517810424}
 --- !u!114 &1702698213 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1885689958486928674, guid: 786da13d49c7127448b9f0c09dace3c7,
@@ -1391,6 +1372,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2872696947230697364, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1702698213}
+    - target: {fileID: 2872696947230697364, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 2041971192}
+    - target: {fileID: 2872696947230697364, guid: 5fc2c147122fe4244a8a4953d7cc44d3,
+        type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 517810424}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fc2c147122fe4244a8a4953d7cc44d3, type: 3}
 --- !u!1001 &5124201659141398013
