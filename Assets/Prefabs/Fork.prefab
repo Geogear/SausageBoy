@@ -180,7 +180,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  player: {fileID: 0}
+  player: {fileID: 2112227709286007643, guid: 5fc2c147122fe4244a8a4953d7cc44d3, type: 3}
 --- !u!114 &316890045
 MonoBehaviour:
   m_ObjectHideFlags: 0

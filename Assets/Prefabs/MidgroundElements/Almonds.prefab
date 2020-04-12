@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4088297979174216977}
   - component: {fileID: 4088297979174216990}
   - component: {fileID: 4088297979174216991}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Almonds
   m_TagString: Untagged
   m_Icon: {fileID: 0}

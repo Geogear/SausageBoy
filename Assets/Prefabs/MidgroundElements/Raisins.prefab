@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2592052200672343064}
   - component: {fileID: 2592052200672343063}
   - component: {fileID: 2592052200672343062}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Raisins
   m_TagString: Untagged
   m_Icon: {fileID: 0}

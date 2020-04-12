@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 745181038810426175}
   - component: {fileID: 745181038810426160}
   - component: {fileID: 745181038810426161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PeanutButter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
