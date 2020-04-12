@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 21968329230505316}
   - component: {fileID: 21968329230505312}
   - component: {fileID: 21968329230505313}
+  - component: {fileID: 316890045}
   m_Layer: 10
   m_Name: Fork
   m_TagString: Untagged
@@ -170,7 +171,7 @@ MonoBehaviour:
   enemyCheckRadius: 0
   enemyGroundCheckPoint: {fileID: 0}
   enemyAttackRange: 0.29
-  enemyAttackDamage: 5
+  enemyAttackDamage: 1
   enemyAttackPoint: {fileID: 21968329813592988}
   playerNoticeRange: 5.03
   playerLayer:
@@ -180,6 +181,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   player: {fileID: 0}
+--- !u!114 &316890045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21968329230505319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8162095d2f76ca4c81d61163fad24b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerName: []
+  animationTime: []
+  cooldownTime: []
 --- !u!1 &21968329813592991
 GameObject:
   m_ObjectHideFlags: 0

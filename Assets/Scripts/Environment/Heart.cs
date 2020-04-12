@@ -32,8 +32,9 @@ public class Heart : Collectables
         // create a circle in enemyAttackPoint position which has a radius size is equal to enemyAttackRange and last parameter represents what kind of layer is touched
         hitPlayer = Physics2D.OverlapCircleAll(collectionPoint.position, collectionPointRange, playerLayer);
         foreach (Collider2D player in hitPlayer)
-        {
-            ++player.GetComponent<Player>().charCurrentHealth;
+        { 
+            if(player.GetComponent<Player>().charCurrentHealth < 3 && player.GetComponent<Player>().charCurrentHealth > 0)
+                ++player.GetComponent<Player>().charCurrentHealth;
             return true;
         }
         return false;

@@ -55,7 +55,7 @@ public class EnemyRenderer2D : MonoBehaviour
     //Variables of object that can be interacted
     [SerializeField] protected Player player;
     Vector2 targetPos;
-    float playerDirection;
+    protected float playerDirection;
 
     //State Variables
     protected EnemyState enemyState;
@@ -87,7 +87,7 @@ public class EnemyRenderer2D : MonoBehaviour
     protected virtual void Chase()
     {
         if(IsChasing())
-        Move();
+            Move();
     }
 
     protected virtual void Move()

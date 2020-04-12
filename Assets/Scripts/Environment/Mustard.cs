@@ -28,4 +28,10 @@ public class Mustard : Collectables
         ++score;
         myText.text = score.ToString();
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(collectionPoint.position, collectionPointRange);
+    }
+
 }

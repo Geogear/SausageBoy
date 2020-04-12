@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectionPoint: {fileID: 7285668392433497802}
-  collectionPointRange: 0
+  collectionPointRange: 0.2
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
