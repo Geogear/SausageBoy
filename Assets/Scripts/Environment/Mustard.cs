@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Mustard : Collectables
 {
-    [SerializeField] protected UnityEngine.UI.Text myText;
+    protected UnityEngine.UI.Text myText;
     int score;
 
     void Start()
     {
+        myText = FindObjectOfType<UnityEngine.UI.Text>();
         collectableSprite = GetComponent<SpriteRenderer>(); 
         score = System.Int32.Parse(myText.text);
     }
@@ -24,7 +25,8 @@ public class Mustard : Collectables
     } 
 
     void UpdateScore()
-    {
+    { 
+        score = System.Int32.Parse(myText.text);
         ++score;
         myText.text = score.ToString();
     }

@@ -12,7 +12,8 @@ public class Fork : EnemyRenderer2D
         enemyIsFacingRight = false;
         enemyRigidbody = GetComponent<Rigidbody2D>();
         enemySprite = GetComponent<SpriteRenderer>();
-        enemyTimer = GetComponent<Timer>();
+        enemyTimer = GetComponent<Timer>(); 
+        player = FindObjectOfType<Player>();
         enemyTimer.addTimer("Chase", 1, 4);
     }
 

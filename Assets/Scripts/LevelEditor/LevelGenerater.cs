@@ -5,16 +5,19 @@ using UnityEngine;
 public class LevelGenerater : MonoBehaviour
 {
     [SerializeField] List<GameObject> levels = null;
+    [SerializeField] public Transform levelEndPosition; 
     [SerializeField] Player player = null;
     [SerializeField] Camera mainCamera = null;
     private int currentLevelIndex;
     private int prevLevelIndex;
+    public float levelWidth = 23.58f;
 
     // Start is called before the first frame update
     void Start()
     {
         currentLevelIndex = 0;
         prevLevelIndex = 0;
+        SpawnLevel(levels[0], mainCamera.transform);
     }
 
     // Update is called once per frame
@@ -32,14 +35,15 @@ public class LevelGenerater : MonoBehaviour
             do
             {
                 currentLevelIndex = Random.Range(0, levels.Count);
-            } while (prevLevelIndex == currentLevelIndex); 
-            SpawnLevel(levels[currentLevelIndex], levels[prevLevelIndex].GetComponent<LevelEditor>().levelEndPosition); 
+            } while (prevLevelIndex == currentLevelIndex);
+            SpawnLevel(levels[currentLevelIndex], levelEndPosition);  
+            levelEndPosition.position = new Vector3(levelEndPosition.position.x + levelWidth, levelEndPosition.position.y, levelEndPosition.position.z);
         }
     }
 
     private bool LevelCanBeGenerated()
     {
-        if (Mathf.Abs(player.transform.position.x - levels[currentLevelIndex].GetComponent<LevelEditor>().levelEndPosition.position.x) <= 10f)
+        if (player.transform.position.x  >= levelEndPosition.position.x)
         {
             return true;
         }
@@ -60,10 +64,10 @@ public class LevelGenerater : MonoBehaviour
 
     private void DeletePreviousLevel()
     {
-        Vector3 leftSide = new Vector3(mainCamera.transform.position.x - mainCamera.orthographicSize, 0);
+        /*Vector3 leftSide = new Vector3(mainCamera.transform.position.x - mainCamera.orthographicSize, 0);
         if ( leftSide.x - levels[prevLevelIndex].GetComponent<LevelEditor>().levelEndPosition.position.x >= 0)
         {
-            Destroy(levels[prevLevelIndex]);
-        }
+            DestroyImmediate(levels[prevLevelIndex]);
+        }*/
     }
 }

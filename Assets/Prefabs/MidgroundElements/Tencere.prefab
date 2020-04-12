@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4814031816253300644}
   - component: {fileID: 4814031816253300651}
   - component: {fileID: 4814031816253300650}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tencere
   m_TagString: Untagged
   m_Icon: {fileID: 0}

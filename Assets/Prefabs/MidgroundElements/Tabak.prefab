@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8884852078449157334}
   - component: {fileID: 8884852078449157337}
   - component: {fileID: 8884852078449157336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tabak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.051315784, y: 0.19731593}
+  m_Offset: {x: 0.0155649185, y: -0.6053014}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,5 +106,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.10534, y: 2.1066146}
+  m_Size: {x: 1.5868874, y: 0.50137997}
   m_EdgeRadius: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5447756789382765244}
   - component: {fileID: 5447756789382765235}
   - component: {fileID: 5447756789382765234}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fruit_Bowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.08, y: 0.66}
+    oldSize: {x: 2.0769231, y: 1.2692307}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

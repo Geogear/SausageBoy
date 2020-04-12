@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 241487895801723245}
   - component: {fileID: 241487895801723234}
   - component: {fileID: 241487895801723235}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Microwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

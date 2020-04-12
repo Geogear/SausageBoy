@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6165025142539022616}
   - component: {fileID: 6165025142539022615}
   - component: {fileID: 6165025142539022614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cereal3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
