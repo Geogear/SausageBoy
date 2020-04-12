@@ -37,7 +37,7 @@ public class LevelGenerater : MonoBehaviour
                 currentLevelIndex = Random.Range(0, levels.Count);
             } while (prevLevelIndex == currentLevelIndex);
             SpawnLevel(levels[currentLevelIndex], levelEndPosition);  
-            levelEndPosition.position = new Vector3(levelEndPosition.position.x + levelWidth, levelEndPosition.position.y, levelEndPosition.position.z);
+            levelEndPosition.position = new Vector3(levelEndPosition.position.x + levelWidth, levelEndPosition.position.y);
         }
     }
 
@@ -52,8 +52,9 @@ public class LevelGenerater : MonoBehaviour
 
     private void SpawnLevel(GameObject level, Transform levelPosition)
     {
-        levelPosition.position += GetCameraHalfSizeVector();
-        Instantiate(level, levelPosition.position, Quaternion.identity);
+        Vector2 newPos = new Vector2(levelPosition.position.x, levelPosition.position.y);
+        newPos += (Vector2)GetCameraHalfSizeVector();
+        Instantiate(level, newPos, Quaternion.identity);
     }
 
     private Vector3 GetCameraHalfSizeVector()
