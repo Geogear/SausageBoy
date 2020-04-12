@@ -16,6 +16,7 @@ public class Player : CharacterRenderer2D
     private int extraJumps; // Amount of jump
     [SerializeField] private int extraJumpsValue = 0;
     [SerializeField] private float fallMultiplier = 2.5f; // to make an advanced jump
+    [SerializeField] private GameObject dustParticles = null;
 
     //TIMER
     float nextAttackTime = 0f;
@@ -65,6 +66,7 @@ public class Player : CharacterRenderer2D
     }
     private void FixedUpdate()
     {
+        EnableDustParticles();
         AdvancedJump();
         IsOnGround();
         CheckSurroundings();
@@ -274,6 +276,18 @@ public class Player : CharacterRenderer2D
         }else if(charTimer.isOnCooldown("NoHit") == false)
         {
             charSprite.color = new Color(charSprite.color.r, charSprite.color.b, charSprite.color.g, 255f);
+        }
+    }
+
+    private void EnableDustParticles()
+    {
+        if (IsRunning())
+        {
+            dustParticles.SetActive(true);
+        }
+        else
+        {
+            dustParticles.SetActive(false);
         }
     }
 }
